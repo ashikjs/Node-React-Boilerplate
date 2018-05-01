@@ -5,12 +5,8 @@ var path = require('path');
 module.exports = {
     context: path.join(__dirname, "./src"),
     entry: "../src/index.js",
-    // mode: "development", // enabled useful tools for development
-    // entry: [
-    //     "webpack-dev-server/client?http://127.0.0.0:8080",
-    //     "webpack/hot/only-dev-server",
-    //     "../src/index.js"
-    // ],
+    mode: "development", // enabled useful tools for development
+    
     module: {
         rules: [
             {
@@ -27,15 +23,6 @@ module.exports = {
                     plugins: ['react-html-attrs', 'transform-decorators-legacy', 'transform-class-properties'],
                 }
             }
-            // {
-            //     test: /\.css$/,
-            //     use: [
-            //         "style-loader",
-            //         {
-            //             loader: "css-loader",
-            //         }
-            //     ]
-            // }
         ]
     },
     resolve: {
@@ -50,7 +37,7 @@ module.exports = {
         filename: "build.js"
     },
     devServer: {
-        port: 8080, // most common port
+        port: 8082, // most common port
         contentBase: './public',
         inline: true,
         historyApiFallback: true,
