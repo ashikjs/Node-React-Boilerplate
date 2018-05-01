@@ -37,7 +37,7 @@ module.exports = {
         filename: "build.js"
     },
     devServer: {
-        port: 8082, // most common port
+        port: 4000, // You can change you want :) 
         contentBase: './public',
         inline: true,
         historyApiFallback: true,
